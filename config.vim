@@ -46,8 +46,6 @@ if exists('+ballooneval')
   set balloondelay=100000
 endif
 
-set guifont=Menlo:h18
-
 " Start Fullscreen
 if has("gui_running")
   set fuoptions=maxvert,maxhorz

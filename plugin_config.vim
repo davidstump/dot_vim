@@ -104,6 +104,22 @@ nnoremap <leader>u :CtrlPCurFile<CR>
 nnoremap <leader>m :CtrlPMRUFiles<CR>
 
 " ---------------
+" airline
+" ---------------
+let g:airline_theme='powerlineish'
+let g:airline_powerline_fonts=1
+let g:airline_detect_modified=1
+let g:airline_mode_map = {
+      \ 'n'  : 'N',
+      \ 'i'  : 'I',
+      \ 'R'  : 'R',
+      \ 'v'  : 'V',
+      \ 'V'  : 'VL',
+      \ 'c'  : 'CMD',
+      \ '' : 'VB',
+      \ }
+
+" ---------------
 " jellybeans.vim colorscheme tweaks
 " ---------------
 " Make cssAttrs (center, block, etc.) the same color as units
