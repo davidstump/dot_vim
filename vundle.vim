@@ -31,6 +31,7 @@ Bundle 'mhinz/vim-signify'
 Bundle 'mhinz/vim-startify'
 Bundle 'mbbill/undotree'
 Bundle 'jszakmeister/vim-togglecursor'
+Bundle 'flazz/vim-colorschemes'
 " Commands
 Bundle 'tomtom/tcomment_vim'
 Bundle 'tpope/vim-surround'

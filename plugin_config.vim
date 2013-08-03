@@ -48,7 +48,7 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType")
 " ---------------
 " Indent Guides
 " ---------------
-let g:indent_guides_enable_on_vim_startup = 1
+let g:indent_guides_enable_on_vim_startup = 0
 
 " ---------------
 " Session
@@ -93,34 +93,15 @@ nnoremap <silent> <leader>wo :ZoomWin<CR>
 " ---------------
 " ctrlp.vim
 " ---------------
-" Ensure Ctrl-P isn't bound by default
-let g:ctrlp_map = ''
+let g:ctrlp_map = '<Leader>t'
+let g:ctrlp_custom_ignore = '\v\~$|\.(o|swp|pyc|wav|mp3|ogg|blend)$|(^|[/\\])\.(hg|git|bzr)($|[/\\])|__init__\.py'
+let g:ctrlp_working_path_mode = 0
+let g:ctrlp_dotfiles = 0
+let g:ctrlp_switch_buffer = 0
 
-" Ensure max height isn't too large. (for performance)
-let g:ctrlp_max_height = 10
-let g:ctrlp_match_func = {'match' : 'matcher#cmatch' }
-
-" Leader Commands
-nnoremap <leader>t :CtrlPRoot<CR>
 nnoremap <leader>b :CtrlPBuffer<CR>
 nnoremap <leader>u :CtrlPCurFile<CR>
 nnoremap <leader>m :CtrlPMRUFiles<CR>
-
-" ---------------
-" airline
-" ---------------
-let g:airline_theme='powerlineish'
-let g:airline_powerline_fonts=1
-let g:airline_detect_modified=1
-let g:airline_mode_map = {
-      \ 'n'  : 'N',
-      \ 'i'  : 'I',
-      \ 'R'  : 'R',
-      \ 'v'  : 'V',
-      \ 'V'  : 'VL',
-      \ 'c'  : 'CMD',
-      \ '' : 'VB',
-      \ }
 
 " ---------------
 " jellybeans.vim colorscheme tweaks
