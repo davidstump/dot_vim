@@ -28,7 +28,7 @@ endif
 " UI
 " ---------------
 set ruler          " Ruler on
-set nonumber         " Line numbers on
+set number         " Line numbers on
 set nowrap         " Line wrapping off
 set laststatus=2   " Always show the statusline
 set cmdheight=2    " Make the command area two lines high
@@ -44,6 +44,11 @@ if exists('+ballooneval')
   set noballooneval
   " 100 second delay seems to be the only way to disable the tooltips
   set balloondelay=100000
+endif
+
+" Use shift + arrows to select text
+if has("gui_macvim")
+    let macvim_hig_shift_movement = 1
 endif
 
 " Start Fullscreen
@@ -84,6 +89,13 @@ set cindent
 set autoindent
 set smarttab
 set expandtab
+
+vnoremap ] >gv
+vnoremap [ <gv
+
+if has("gui_macvim")
+    let macvim_hig_shift_movement = 1
+endif
 
 " ---------------
 " Searching

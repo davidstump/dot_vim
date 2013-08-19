@@ -56,6 +56,7 @@ Bundle 'SirVer/ultisnips'
 Bundle 'g3orge/vim-voogle'
 Bundle 'benmills/vimux'
 Bundle 'jgdavey/vim-turbux'
+Bundle 'terryma/vim-multiple-cursors'
 " Automatic Helpers
 Bundle 'IndexedSearch'
 Bundle 'xolox/vim-session'
@@ -63,7 +64,6 @@ Bundle 'Raimondi/delimitMate'
 Bundle 'scrooloose/syntastic'
 Bundle 'ervandew/supertab'
 Bundle 'Valloric/MatchTagAlways'
-Bundle 'Valloric/YouCompleteMe'
 " Language Additions
 "   Ruby
 Bundle 'vim-ruby/vim-ruby'
@@ -71,7 +71,11 @@ Bundle 'tpope/vim-haml'
 Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-rake'
 Bundle 'tpope/vim-bundler'
+Bundle 'tpope/vim-rvm'
+"   Elixir
+Bundle 'elixir-lang/vim-elixir'
 "   JavaScript
+Bundle 'othree/javascript-libraries-syntax.vim'
 Bundle 'pangloss/vim-javascript'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'leshill/vim-json'
