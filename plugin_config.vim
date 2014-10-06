@@ -24,15 +24,21 @@ let g:space_disable_select_mode = 1
 " ---------------
 " Syntastic
 " ---------------
-let g:syntastic_enable_signs = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_mode_map = { 'mode': 'active',
-                           \ 'active_filetypes': [],
-                           \ 'passive_filetypes': ['scss'] }
+" let g:syntastic_enable_signs = 1
+" let g:syntastic_auto_loc_list = 1
+" let g:syntastic_mode_map = { 'mode': 'active',
+"                            \ 'active_filetypes': [],
+"                            \ 'passive_filetypes': ['scss'] }
 
 " Hat tip http://git.io/SPIBfg
-let g:syntastic_error_symbol = '✗'
-let g:syntastic_warning_symbol = '⚠'
+" let g:syntastic_error_symbol = '✗'
+" let g:syntastic_warning_symbol = '⚠'
+
+" ---------------
+"  Tagbar
+" ---------------
+
+nnoremap <leader>g :TagbarToggle<CR>
 
 " ---------------
 " NERDTree
@@ -236,7 +242,7 @@ let g:togglecursor_leave='line'
 command! REmigrate :call VimuxRunCommand("rake db:drop db:create db:migrate test:prepare")
 command! Migrate :call VimuxRunCommand("rake db:migrate test:prepare")
 nnoremap <leader>a <CR>
-nnoremap <leader>r   :R
+" nnoremap <leader>r   :R
 nnoremap <leader>rmm :Rmodel<space>
 
 nnoremap <leader>rff :Rfabricator<space>
@@ -307,7 +313,7 @@ let g:rails_gem_projections = {
 " ---------------
 " UltiSnips
 " ---------------
-let g:UltiSnipsSnippetDirectories=["MyUltiSnips"]
+let g:UltiSnipsSnippetDirectories=["MyUltiSnips", "bundle/angular-vim-snippets/UltiSnips"]
 function! g:UltiSnips_Complete()
   call UltiSnips_JumpForwards()
   if g:ulti_jump_forwards_res == 0
@@ -350,7 +356,7 @@ nnoremap <leader>cm :VimuxPromptCommand<CR>
 let g:no_turbux_mappings = 1
 map <leader>e <Plug>SendTestToTmux
 map <leader>x <Plug>SendFocusedTestToTmux
-let g:turbux_command_rspec = 'spring rspec'
+let g:turbux_command_rspec = 'spring spec'
 let g:turbux_command_cucumber = 'spring cucumber'
 
 " ---------------
@@ -361,3 +367,9 @@ nnoremap <silent><leader>cc :TComment<CR>
 vnoremap <silent><leader>cc :TComment<CR>
 nnoremap <silent><leader>cb :TCommentBlock<CR>
 vnoremap <silent><leader>cb :TCommentBlock<CR>
+
+" ---------------
+" emmet
+" _______________
+
+let g:user_emmet_leader_key='<leader>'

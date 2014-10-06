@@ -6,7 +6,8 @@
 " Color
 " ---------------
 set background=dark
-colorscheme railscasts 
+colorscheme codeschool
+autocmd ColorScheme * highlight clear SignColumn
 " Force 256 color mode if available
 if $TERM =~ "-256color"
    set t_Co=256
@@ -107,6 +108,13 @@ set hlsearch   " Highlight search results
 set wildignore+=*.o,*.obj,*.exe,*.so,*.dll,*.pyc,.svn,.hg,.bzr,.git,
   \.sass-cache,*.class,*.scssc,*.cssc,sprockets%*,*.lessc
 
+" CtrlP Funky
+let g:ctrlp_extensions = ['funky']
+nnoremap <leader><leader>r :CtrlPFunky<CR>
+
+:autocmd InsertEnter * set cul
+:autocmd InsertLeave * set nocul
+
 " ---------------
 " Visual
 " ---------------
@@ -146,3 +154,18 @@ set mouse=a    " Mouse in all modes
 
 " Better complete options to speed it up
 set complete=.,w,b,u,U
+if executable('coffeetags')
+  let g:tagbar_type_coffee = {
+        \ 'ctagsbin' : 'coffeetags',
+        \ 'ctagsargs' : '',
+        \ 'kinds' : [
+        \ 'f:functions',
+        \ 'o:object',
+        \ ],
+        \ 'sro' : ".",
+        \ 'kind2scope' : {
+        \ 'f' : 'object',
+        \ 'o' : 'object',
+        \ }
+        \ }
+endif
